@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <RelativeLayout
+        android:id="@+id/loadingPanelMain1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+      <ProgressBar
+          android:id="@+id/progressBarMainLoading"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:indeterminate="true"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/innerLinearLayout"
+        android:visibility="gone">
+        <SearchView
+            android:id="@+id/searchViewMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:queryHint="@string/search_hint" />
+        
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_weight="0.9"
+            android:animationCache="false"
+            android:scrollbars="vertical"
+            />
+        <ProgressBar
+            android:id="@+id/progressBarMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_weight="0.1" />
+    </LinearLayout>
+</LinearLayout>

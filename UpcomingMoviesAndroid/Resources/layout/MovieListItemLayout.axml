@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="?android:attr/selectableItemBackground"
+              >
+    <ImageView
+        android:id="@+id/imgViewMovieListItem"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="0.75"
+        android:maxWidth="120dp"
+        android:maxHeight="180dp"
+        android:minWidth="120dp"
+        android:minHeight="180dp"
+        android:adjustViewBounds="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/innerLinearLayoutMovieListItem"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5">
+        <TextView
+            android:id="@+id/txtViewMovieListItemTitle"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="0.6"
+            android:text="@string/details_title"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/txtViewMovieListItemGenres"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="0.75"
+            android:text="@string/details_genres"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/txtViewMovieListItemReleaseDate"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="0.75"
+            android:text="@string/details_release_date"
+            android:gravity="center"
+            android:layout_marginBottom="15dp" />
+    </LinearLayout>
+</LinearLayout>
